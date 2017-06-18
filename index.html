@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<select name="select" id="selectOne" onchange="select_all(this.id)">
+    <option >请选择</option>
+    <option value="benc">奔驰啊</option>
+    <option value="bmw" >宝马啊</option>
+</select>
+
+
+<div id="box1" style="display: block;">
+    box1
+</div>
+<div id="box2" style="display: none">
+    box2
+</div>
+
+
+
+
+<script>
+    $(document).ready(function () {
+    });
+    function select_all(x) {
+        var val = document.getElementById(x).value;
+        if (val == "benc"){
+            $("div#box1").show();
+            $("div#box2").hide();
+        }
+        if (val == "bmw") {
+            $("div#box2").show();
+            $("div#box1").hide();
+        }
+    }
+</script>
+</body>
+</html>
