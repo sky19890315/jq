@@ -6,27 +6,22 @@
     <script src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<select name="kenSelect" multiple="multiple">
-    <option value="benc">benc</option>
-    <option value="luxus">luxus</option>
-    <option value="bmw">bwm</option>
-</select>
-<div style="background-color: antiquewhite">
 
-</div>
-
+<form action="get.php" method="post" id="form_1">
+    <input type="text" name="name">
+    <input type="submit" value="提交">
+</form>
 
 
 
 <script>
-$("select").change(function () {
-    var str = "";
-    $("select option:selected").each(function () {
-        str += $(this).text() + "";
-    });
-    $("div").text( str );
+$("#form_1").submit(function () {
+    $.ajax(
 
-}).change();
+    );
+    return false
+});
+
 </script>
 </body>
 </html>
